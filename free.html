@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Free Marcano · Actor</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: serif elegante + sans-serif limpia -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome 6 (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Personalización sutil de estilos -->
+    <style>
+        body {
+            background-color: #0a0a0a;
+            /* negro profundo */
+            color: #f0f0f0;
+            /* blanco roto */
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .film-credit {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            /* dorado */
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+
+        .gold-accent {
+            color: #D4AF37;
+        }
+
+        .burgundy-accent {
+            color: #800020;
+        }
+
+        .bg-burgundy {
+            background-color: #800020;
+        }
+
+        .border-gold {
+            border-color: #D4AF37;
+        }
+
+        .card-bg {
+            background-color: #111;
+        }
+
+        .card-bg:hover {
+            background-color: #1a1a1a;
+            transition: background 0.2s ease;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8));
+        }
+
+        .image-placeholder {
+            background-color: #1e1e1e;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="50" y="50" font-family="Arial" font-size="14" fill="%23666" text-anchor="middle" dy=".3em">Imagen</text></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-placeholder {
+            background: linear-gradient(145deg, #0c0c0c, #1a1a1a);
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- HERO SECTION – estilo créditos de película -->
+    <section
+        class="relative min-h-screen flex items-end md:items-center justify-start px-6 md:px-16 py-12 md:py-0 overflow-hidden">
+        <!-- Imagen de fondo (blanco y negro, alto contraste) -->
+        <div class="absolute inset-0 w-full h-full">
+            <div
+                class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp1867290.jpg')] bg-cover bg-center bg-no-repeat">
+            </div>
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <!-- Contenido superpuesto -->
+        <div class="relative z-10 max-w-4xl">
+            <span class="film-credit text-sm md:text-base mb-2 inline-block">VENEZUELA · ACTOR DE CINE Y TEATRO</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight md:leading-tight mb-4">
+                Free<br>Marcano
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mb-8 font-light">
+                “Cada personaje es una vida que merece ser contada con verdad.”
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#showreel"
+                    class="bg-[#D4AF37] hover:bg-[#b8960c] text-black font-semibold py-3 px-8 rounded-none transition duration-200 inline-flex items-center gap-2">
+                    <i class="fas fa-play"></i> Ver showreel
+                </a>
+                <a href="#contacto"
+                    class="border border-white hover:border-[#D4AF37] text-white hover:text-[#D4AF37] font-semibold py-3 px-8 rounded-none transition duration-200 inline-flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Contactar
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- SHOWREEL (reel en fondo oscuro, texto créditos) -->
+    <section id="showreel" class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div class="text-center mb-12">
+            <span class="film-credit text-sm md:text-base">TRABAJO RECIENTE</span>
+            <h2 class="serif-title text-4xl md:text-5xl text-white mt-2">Showreel 2026</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mt-4 text-lg">Una selección de los papeles que han marcado mi
+                trayectoria.</p>
+        </div>
+        <div
+            class="relative video-placeholder aspect-video w-full flex items-center justify-center group cursor-pointer border border-gray-800">
+            <!-- Simulación de reproductor de video con overlay de créditos -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <i
+                    class="fas fa-circle-play text-6xl md:text-7xl text-[#D4AF37] opacity-80 group-hover:opacity-100 transition-opacity mb-4"></i>
+                <span class="text-white text-lg md:text-xl uppercase tracking-[0.3em] text-center px-4">DEMO REEL · 2
+                    MIN</span>
+                <span class="text-gray-400 text-sm mt-2">(vista previa)</span>
+            </div>
+            <!-- Texto tipo créditos superpuesto en la esquina inferior derecha -->
+            <div class="absolute bottom-4 right-4 text-right">
+                <p class="text-xs text-gray-300 uppercase tracking-wider">Fotografía: Andrés Briceño</p>
+                <p class="text-xs text-[#D4AF37]">Montaje: Free Marcano</p>
+            </div>
+        </div>
+        <p class="text-gray-500 text-sm mt-4 italic text-center">* Reel completo disponible bajo solicitud.</p>
+    </section>
+
+    <!-- BIOGRAFÍA BREVE – tono profesional pero cercano -->
+    <section class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="film-credit text-sm">SOBRE MÍ</span>
+                <h2 class="serif-title text-3xl md:text-4xl text-white mt-2 mb-6">Transformar para conmover</h2>
+                <div class="space-y-5 text-gray-300 leading-relaxed text-lg">
+                    <p>
+                        <span class="text-[#D4AF37] font-semibold">Free Marcano</span> (Caracas, 1992) es un actor
+                        venezolano que ha dedicado su vida a la escena teatral y audiovisual.
+                        Formado en la <span class="italic">Escuela de Cine y TV de Caracas</span> y con más de 12 años
+                        de trayectoria, ha recorrido teatros y festivales dentro y fuera del país.
+                    </p>
+                    <p>
+                        “Para mí actuar no es fingir, es <span class="text-white font-medium">desnudar el alma</span> y
+                        prestarle el cuerpo a otras realidades.
+                        Cada función es un acto de fe y resistencia cultural.”
+                    </p>
+                    <p>
+                        Su versatilidad le ha permitido encarnar desde clásicos shakesperianos hasta complejos
+                        personajes del teatro contemporáneo venezolano.
+                        Cree firmemente que el arte transforma comunidades y por eso imparte talleres gratuitos en su
+                        ciudad natal.
+                    </p>
+                </div>
+            </div>
+            <!-- Imagen de apoyo en B&W -->
+            <div class="bg-[#151515] p-2 border border-gray-700">
+                <div class="image-placeholder w-full h-80 bg-cover bg-center"
+                    style="background-image: url('https://wallpapercat.com/w/full/d/d/4/10591-2160x3840-samsung-4k-keanu-reeves-background.jpg');">
+                </div>
+                <p class="text-gray-400 text-xs mt-2 uppercase tracking-wider">Free en "El Páramo" · 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRÉDITOS DESTACADOS (CURRICULUM VITAE) -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <span class="film-credit text-sm">TRAYECTORIA</span>
+            <h2 class="serif-title text-4xl md:text-5xl text-white mt-2">Créditos destacados</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+            <div class="border border-gray-800 p-6 hover:border-[#D4AF37] transition">
+                <i class="fas fa-film text-3xl text-[#D4AF37] mb-3"></i>
+                <h3 class="font-semibold text-white">Cine</h3>
+                <p class="text-gray-400 text-sm mt-2">"La Cima" (2024)<br>"Azul decembrino" (2022)<br>"Claroscuro"
+                    (2020)</p>
+            </div>
+            <div class="border border-gray-800 p-6 hover:border-[#D4AF37] transition">
+                <i class="fas fa-tv text-3xl text-[#D4AF37] mb-3"></i>
+                <h3 class="font-semibold text-white">Televisión</h3>
+                <p class="text-gray-400 text-sm mt-2">"Pálpito" (Netflix)<br>"La Doña" (Venevisión)<br>+ series
+                    independientes</p>
+            </div>
+            <div class="border border-gray-800 p-6 hover:border-[#D4AF37] transition">
+                <i class="fas fa-mask text-3xl text-[#D4AF37] mb-3"></i>
+                <h3 class="font-semibold text-white">Teatro</h3>
+                <p class="text-gray-400 text-sm mt-2">"Hamlet" · 8 funciones<br>"Boris Godunov"<br>"El Páramo" (Festival
+                    2023)</p>
+            </div>
+            <div class="border border-gray-800 p-6 hover:border-[#D4AF37] transition">
+                <i class="fas fa-bullhorn text-3xl text-[#D4AF37] mb-3"></i>
+                <h3 class="font-semibold text-white">Publicidad</h3>
+                <p class="text-gray-400 text-sm mt-2">Polar · Movistar<br>Bancaribe · Coca-Cola</p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-12">
+            <a href="#"
+                class="inline-flex items-center gap-2 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black px-6 py-3 transition duration-200 font-medium">
+                <i class="fas fa-file-pdf"></i> Descargar CV completo (PDF)
+            </a>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE FOTOS (4 a 8, B&W / alto contraste) -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800">
+        <div class="text-center mb-12">
+            <span class="film-credit text-sm">PERSONAJES Y ESCENAS</span>
+            <h2 class="serif-title text-4xl md:text-5xl text-white mt-2">Galería</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <!-- 8 imágenes placeholder con estilo B&W -->
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1598897996411-4f9d9a7ec5f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1506880135365-e6da896621f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80');">
+            </div>
+            <div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition duration-300"
+                style="background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?ixlib=rb-4.0.3&auto=format&fit=crop&w=683&q=80');">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE 10 CARDS: PERSONAJES / ACTUACIONES -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800">
+        <div class="text-center mb-12">
+            <span class="film-credit text-sm">EN ESCENA</span>
+            <h2 class="serif-title text-4xl md:text-5xl text-white mt-2">Personajes que habitan en mí</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mt-4">Diez roles que han desafiado mi oficio y me han transformado
+                como intérprete.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Card 1: Boris -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2024</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Boris</h3>
+                <p class="text-gray-400 text-sm italic">"Los bajos fondos" de Gorki</p>
+                <p class="text-gray-500 text-xs mt-3">Un hombre atormentado por el pasado que busca redención en la
+                    miseria.</p>
+            </div>
+            <!-- Card 2: Hamlet -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2023</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Hamlet</h3>
+                <p class="text-gray-400 text-sm italic">"Hamlet" de Shakespeare</p>
+                <p class="text-gray-500 text-xs mt-3">Versión caribeña del príncipe danés, con ritmos de tambor y
+                    poesía.</p>
+            </div>
+            <!-- Card 3: El Páramo -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2023</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Pedro</h3>
+                <p class="text-gray-400 text-sm italic">"El Páramo" (obra original)</p>
+                <p class="text-gray-500 text-xs mt-3">Campesino andino que enfrenta la violencia de la tierra y el
+                    olvido.</p>
+            </div>
+            <!-- Card 4: Boris Godunov -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2022</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Boris Godunov</h3>
+                <p class="text-gray-400 text-sm italic">"Boris Godunov" de Pushkin</p>
+                <p class="text-gray-500 text-xs mt-3">Zar atormentado por la culpa, una interpretación íntima y
+                    visceral.</p>
+            </div>
+            <!-- Card 5: Segismundo -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2021</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Segismundo</h3>
+                <p class="text-gray-400 text-sm italic">"La vida es sueño"</p>
+                <p class="text-gray-500 text-xs mt-3">Príncipe encerrado, monólogo sobre la libertad y la ilusión.</p>
+            </div>
+            <!-- Card 6: Eladio -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Cine · 2024</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Eladio</h3>
+                <p class="text-gray-400 text-sm italic">"La Cima" (largometraje)</p>
+                <p class="text-gray-500 text-xs mt-3">Guía de montaña que esconde un secreto familiar. Premio al mejor
+                    actor en Festival de Mérida.</p>
+            </div>
+            <!-- Card 7: Armando -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">TV · 2023</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Armando</h3>
+                <p class="text-gray-400 text-sm italic">"Pálpito" (Netflix)</p>
+                <p class="text-gray-500 text-xs mt-3">Médico forense con una doble vida. Participación especial.</p>
+            </div>
+            <!-- Card 8: José Francisco -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2020</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">José F.</h3>
+                <p class="text-gray-400 text-sm italic">"El médico a palos"</p>
+                <p class="text-gray-500 text-xs mt-3">Versión contemporánea de Molière, comedia física y crítica social.
+                </p>
+            </div>
+            <!-- Card 9: El Extranjero -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Performance · 2019</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Meursault</h3>
+                <p class="text-gray-400 text-sm italic">"El extranjero" (adaptación)</p>
+                <p class="text-gray-500 text-xs mt-3">Monólogo inspirado en Camus. Indiferencia y absurdo en la voz de
+                    un hombre.</p>
+            </div>
+            <!-- Card 10: Simón -->
+            <div class="card-bg border border-gray-800 p-6 hover:border-[#D4AF37] transition-all">
+                <span class="text-xs uppercase text-[#D4AF37] tracking-wider">Teatro · 2018</span>
+                <h3 class="serif-title text-2xl text-white mt-1 mb-2">Simón</h3>
+                <p class="text-gray-400 text-sm italic">"Bolívar, sueño de arena"</p>
+                <p class="text-gray-500 text-xs mt-3">Un Bolívar anciano y reflexivo, antes del exilio. Gira nacional.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-400 text-sm">
+            <i class="fas fa-plus-circle text-[#D4AF37] mr-1"></i> Cada personaje tendrá su propia página individual
+            próximamente.
+        </div>
+    </section>
+
+    <!-- CONTACTO / REPRESENTACIÓN -->
+    <section id="contacto" class="max-w-5xl mx-auto px-6 py-24 border-t border-gray-800">
+        <div class="text-center mb-12">
+            <span class="film-credit text-sm">CONTACTO PROFESIONAL</span>
+            <h2 class="serif-title text-4xl md:text-5xl text-white mt-2">Representación</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-black/40 p-8 border border-gray-800">
+                <h3 class="text-2xl serif-title text-white mb-4">Agencia · Talento Escénico</h3>
+                <p class="text-gray-300 mb-2"><i class="fas fa-user-tie w-6 text-[#D4AF37]"></i> Carmen Luisa Rojas</p>
+                <p class="text-gray-300 mb-2"><i class="fas fa-envelope w-6 text-[#D4AF37]"></i>
+                    free.marcano@talentoven.com</p>
+                <p class="text-gray-300 mb-4"><i class="fas fa-phone-alt w-6 text-[#D4AF37]"></i> +58 212 555 1234</p>
+                <div class="flex gap-5 mt-6 text-2xl">
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition"><i class="fab fa-imdb"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="bg-black/40 p-8 border border-gray-800">
+                <h3 class="text-2xl serif-title text-white mb-4">¿Quieres trabajar conmigo?</h3>
+                <p class="text-gray-300 mb-6">Para casting, colaboraciones o entrevistas, escribe directamente o
+                    contacta a mi agencia.</p>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nombre"
+                        class="w-full bg-gray-900 border border-gray-700 p-3 text-white placeholder-gray-500 focus:border-[#D4AF37] focus:outline-none">
+                    <input type="email" placeholder="Email"
+                        class="w-full bg-gray-900 border border-gray-700 p-3 text-white placeholder-gray-500 focus:border-[#D4AF37] focus:outline-none">
+                    <textarea placeholder="Mensaje" rows="3"
+                        class="w-full bg-gray-900 border border-gray-700 p-3 text-white placeholder-gray-500 focus:border-[#D4AF37] focus:outline-none"></textarea>
+                    <button type="submit"
+                        class="w-full bg-[#D4AF37] hover:bg-[#b8960c] text-black font-semibold py-3 transition duration-200">Enviar
+                        mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER minimalista -->
+    <footer
+        class="max-w-7xl mx-auto px-6 py-8 border-t border-gray-800 text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
+        <p>© 2026 Free Marcano. Actor.</p>
+        <p class="mt-2 md:mt-0">Fotografías: cortesía de <span class="text-gray-400">Jesús Rondón</span> y <span
+                class="text-gray-400">María Fernanda Gil</span></p>
+    </footer>
+
+    <!-- Pequeño ajuste para imágenes de Unsplash (todas libres) -->
+    <!-- Nota: todas las imágenes son de Unsplash con licencia gratuita, usadas como placeholder -->
+</body>
+
+</html>
