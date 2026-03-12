@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Free Marcano · Boris · Personaje</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display + Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos personalizados (misma base que index) -->
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .film-credit {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+
+        .gold-accent {
+            color: #D4AF37;
+        }
+
+        .border-gold {
+            border-color: #D4AF37;
+        }
+
+        .card-bg {
+            background-color: #111;
+        }
+
+        .card-bg:hover {
+            background-color: #1a1a1a;
+            transition: background 0.2s ease;
+        }
+
+        .image-placeholder {
+            background-color: #1e1e1e;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="50" y="50" font-family="Arial" font-size="14" fill="%23666" text-anchor="middle" dy=".3em">Imagen</text></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* overlay sutil para hero */
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.9));
+        }
+
+        /* Fondo ligeramente distinto para detrás de escena */
+        .behind-bg {
+            background: #0e0e0e;
+            /* un pelo más claro que el fondo general */
+            border-left: 2px solid #D4AF37;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- HERO SECTION – imagen B&W impactante, nombre del personaje y cita -->
+    <section
+        class="relative min-h-screen flex items-end md:items-center justify-start px-6 md:px-16 py-12 md:py-0 overflow-hidden">
+        <!-- Imagen de fondo B&W (simulada con filtro) -->
+        <div class="absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 w-full h-full overflow-hidden bg-black">
+                <!-- HERO: NO lleva lazy porque es la primera imagen (carga inmediata) -->
+                <img src="img%20boris/fondo.webp" alt="Fondo cinematográfico"
+                    class="w-full h-full object-cover object-[center_15%] contrast-125">
+            </div>
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <!-- Contenido -->
+        <div class="relative z-10 max-w-4xl">
+            <span class="film-credit text-sm md:text-base mb-2 inline-block">INTERPRETADO POR FREE MARCANO</span>
+            <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight mb-4">Boris</h1>
+            <p class="text-2xl md:text-3xl text-gray-200 max-w-2xl mb-6 italic font-light">“Filósofo perrocalientero.”
+            </p>
+            <div class="h-1 w-24 bg-[#D4AF37] mb-8"></div>
+            <div class="flex gap-3 text-gray-300">
+                <span class="border border-gray-600 px-4 py-1 text-sm tracking-wider">DRAMA URBANO</span>
+                <span class="border border-gray-600 px-4 py-1 text-sm tracking-wider">TEATRO 2026</span>
+            </div>
+        </div>
+        <!-- pequeño crédito tipo cine -->
+        <div class="absolute bottom-6 right-6 text-right text-xs text-gray-400 z-10">
+            <p>Fotografía: A. Briceño · Vestuario: M. Fermín</p>
+        </div>
+    </section>
+
+    <!-- HISTORIA (sección asimétrica) – narra la vida de Boris, el perrocalientero -->
+    <section class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+            <!-- Texto principal -->
+            <div class="md:pr-10">
+                <span class="film-credit text-sm">HISTORIA</span>
+                <h2 class="serif-title text-4xl md:text-5xl text-white mt-2 mb-6">Boris, el perrocalientero</h2>
+                <div class="space-y-5 text-gray-300 text-lg leading-relaxed">
+                    <p><span class="text-[#D4AF37] font-semibold">Boris</span> en su triciclo es una silueta que el
+                        atardecer Carabobeño no puede borrar: bata blanca impecable, gorro triangular y un carrito que
+                        es
+                        extensión de su historia. Con termo de jugo, sombrilla gastada y salchichas bailando en la
+                        vitrina, no solo vende perros calientes: oficia el ritual del encuentro.</p>
+                    <p>Treinta años en la calle le han enseñado que la comida es pretexto. Mientras unta mayonesa con
+                        precisión de relojero, Boris conversa, escucha, recuerda. Sabe distinguir al cliente del que
+                        trae malas intenciones, y su valentía tranquila le permite ser duro sin dejar de ser bueno.</p>
+                    <p>Pero su historia más sagrada es Teresa: muchacha sin un centavo a quien alimentó por días hasta
+                        que encontró trabajo. De esas visitas nació el amor, y del amor, Génesis, hoy a punto de
+                        graduarse como abogada.</p>
+                    <p>Boris entiende que los pequeños actos germinan donde uno menos espera. Que dar de comer no es
+                        caridad, es no permitir que otro pase hambre estando uno cerca. Por eso, cuando vea esa
+                        triciclo en la esquina, sepa que no es un simple vendedor. Es la prueba de que un hombre con un
+                        carrito puede, sin moverse, cambiar el mundo de quienes se sientan a su mesa.</p>
+                </div>
+            </div>
+            <!-- Bloque asimétrico de imágenes (con lazy loading) -->
+            <div class="grid grid-cols-2 gap-4 md:gap-6">
+                <!-- Imagen 5 -->
+                <div class="w-full h-64 md:h-80 overflow-hidden bg-gray-900">
+                    <img src="img%20boris/5.webp" alt="Boris - atmósfera nocturna"
+                        class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="w-full h-64 md:h-80 overflow-hidden bg-gray-900">
+                    <img src="img%20boris/2.webp" alt="Boris - retrato" class="w-full h-full object-cover object-center"
+                        loading="lazy">
+                </div>
+
+                <!-- ÚLTIMA IMAGEN: ocupa 2 columnas -->
+                <div class="col-span-2 w-full h-64 md:h-80 overflow-hidden bg-gray-900">
+                    <img src="img%20boris/4.webp" alt="Boris en el carrito"
+                        class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <!-- Nota de contexto (estilo cine) -->
+        <div class="border-l-2 border-[#D4AF37] pl-5 mt-16 text-gray-400 text-sm max-w-3xl">
+            <i class="fas fa-quote-left text-[#D4AF37] mr-2"></i> La historia de Boris se gestó durante un taller de
+            dramaturgia en el barrio, con testimonios de vendedores ambulantes.
+        </div>
+    </section>
+
+    <!-- DETRÁS DE ESCENA – bloque con fondo ligeramente distinto, retos interpretativos -->
+    <section class="max-w-7xl mx-auto px-6 py-16 behind-bg border-t border-gray-800 md:rounded-r-[50px] my-8">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+            <div class="md:col-span-2">
+                <span class="film-credit text-sm">DETRÁS DE ESCENA</span>
+                <h2 class="serif-title text-3xl md:text-4xl text-white mt-2 mb-5">Construir a Boris</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Convertirme en Boris exigió primero aprender a preparar un buen perro caliente. No bastaba con
+                        aparentar: el público debía comer algo realmente rico. Pasé horas dominando
+                        tiempos de baño maría y el punto exacto para una buen perro caliente.</p>
+                    <p>El verdadero reto llegó al fusionar cocina y actuación. Boris no habla desde un escenario: habla
+                        mientras unta pan, recibe dinero, responde al cliente. El texto debe fluir mientras las manos
+                        trabajan, y cualquier imprevisto una salsa que se acaba, una pregunta inesperada obliga a
+                        improvisar. La cuarta pared es un mostrador sobre ruedas que siempre se rompe para que todos
+                        seamos parte de la historia.</p>
+                    <p>Mantener el personaje en medio del caos cocinando, sirviendo, con el público interviniendo es
+                        como caminar en la cuerda floja. Pero cuando alguien termina su perro caliente con los ojos
+                        brillantes por la historia de Boris, entiendo que cada ensayo valió la pena. El truco no era
+                        dominar el libreto ni la cocina, sino dejar de ser actor para convertirme en perrocalientero.
+                        Ahí, en esa rendija, ocurre la magia.</p>
+                </div>
+            </div>
+            <!-- Imagen simbólica (el carrito) con lazy loading -->
+            <div class="flex justify-center md:justify-end">
+                <div class="w-56 h-80 border-2 border-[#D4AF37] p-1 bg-black/60">
+                    <img src="img%20boris/perfil1.webp" alt="Carrito original usado en escena"
+                        class="w-full h-full object-cover object-[center_70%]" loading="lazy">
+                    <p class="text-right text-xs text-gray-400 mt-1">Carrito original usado en escena</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BOTÓN DE RETORNO elegante al portafolio principal -->
+    <div class="max-w-7xl mx-auto px-6 pb-24 text-center md:text-left">
+        <a href="index.html"
+            class="inline-flex items-center gap-3 border border-[#D4AF37] hover:bg-[#D4AF37] hover:text-black text-[#D4AF37] font-medium py-4 px-10 transition duration-300 group">
+            <i class="fas fa-arrow-left text-lg group-hover:-translate-x-1 transition-transform"></i>
+            <span class="tracking-wide">VOLVER AL PORTAFOLIO PRINCIPAL</span>
+        </a>
+        <p class="text-xs text-gray-500 mt-6">© 2026 Free Marcano · "Boris, el perrocalientero" · Teatro Venezolano</p>
+    </div>
+
+    <!-- FOOTER minimalista (igual que index) -->
+    <footer
+        class="max-w-7xl mx-auto px-6 py-8 border-t border-gray-800 text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
+        <p>© 2026 Free Marcano. Actor.</p>
+        <p class="mt-2 md:mt-0">Fotografías: cortesía de <span class="text-gray-400">Jesús Rondón</span> y <span
+                class="text-gray-400">María Fernanda Gil</span></p>
+    </footer>
+
+    <!-- Nota: todas las imágenes son de Unsplash con licencia gratuita, usadas como placeholder temático -->
+</body>
+
+</html>
